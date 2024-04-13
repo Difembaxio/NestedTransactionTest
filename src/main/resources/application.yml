@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: TransactionalDemoProject
+  datasource:
+    hikari:
+      jdbc-url: jdbc:h2:mem:testdb
+      username: sa
+      password: password
+      driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    defer-datasource-initialization: true
+          
+logging:
+  level:
+    org.springframework.orm.jpa.JpaTransactionManager: TRACE
